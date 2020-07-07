@@ -1,0 +1,30 @@
+.notifications-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.notification {
+  color: white;
+  padding: 1rem;
+  border-radius: 6px;
+  opacity: 0.75;
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.notification > i {
+  margin-right: 1rem;
+}
+
+.notification.success {
+  background-color: #54bc7b;
+}
+
+.notification.warning {
+  background-color: #facb71;
+}
+
+.notification.error {
+  background-color: #e22c4d;
+}

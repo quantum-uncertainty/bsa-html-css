@@ -1,0 +1,87 @@
+.cards {
+  --easeInQuad: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+  --easeInBack: cubic-bezier(0.36, 0, 0.66, -0.56);
+  --easeInCubic: cubic-bezier(0.32, 0, 0.67, 0);
+  --easeOutCubic: cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+@keyframes slide-bottom {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.slide-down {
+  animation: slide-bottom 0.7s ease-in;
+}
+
+.flip-out-vertical:hover .card__cover {
+  transition: 0.7s var(--easeOutCubic);
+  opacity: 0;
+  transform: rotateY(70deg);
+}
+
+.scale-out-bottom-right .card__cover {
+  transform-origin: right bottom;
+  transition: 0.7s var(--easeOutCubic);
+}
+.scale-out-bottom-right:hover .card__cover {
+  transform: scale(0);
+  transform-origin: right bottom;
+}
+
+.fade-out:hover .card__cover {
+  opacity: 0;
+  transition: 0.7s var(--easeInCubic);
+}
+
+.swirl-out:hover .card__cover {
+  transition: 0.7s var(--easeInCubic);
+  transform: rotate(-540deg) scale(0);
+  opacity: 0;
+}
+
+.swing-out-top .card__cover {
+  transform-origin: top;
+  transition: 0.7s var(--easeOutCubic);
+}
+.swing-out-top:hover .card__cover {
+  transform-origin: top;
+  transform: rotateX(100deg);
+  opacity: 0;
+}
+
+.swing-out-left .card__cover {
+  transform-origin: left;
+  opacity: 1;
+  transition: 0.7s var(--easeOutCubic);
+}
+.swing-out-left:hover .card__cover {
+  transform: rotateY(100deg);
+  transform-origin: left;
+  opacity: 0;
+}
+
+.slide-rotate-right:hover .card__cover {
+  transition: 0.7s var(--easeInBack);
+  transform: translateX(150px) rotateY(-90deg);
+}
+
+.scale-out-left .card__cover {
+  transform-origin: left;
+  transition: 0.7s var(--easeInQuad);
+}
+.scale-out-left:hover .card__cover {
+  opacity: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.scale-out-center:hover .card__cover {
+  transition: 0.7s var(--easeInQuad);
+  transform: scaleX(0) scaleY(0);
+  opacity: 0;
+}

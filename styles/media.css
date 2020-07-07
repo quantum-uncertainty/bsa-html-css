@@ -1,0 +1,44 @@
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  :root {
+    --horizontal-margin: 10vw;
+    --text-large: 5.5rem;
+    --text-big: 4.5rem;
+    --text-medium: 2.5rem;
+    --text-regular: 1.5rem;
+  }
+
+  .cards {
+    min-height: 550px;
+    grid:
+      "bsa  js   js     details" 2fr
+      "java java php    php    " 1fr
+      "qa   qa   dotnet dotnet " 1fr
+      / 45% 5% 30% 20%;
+  }
+
+  .js > .card__cover {
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+
+  .notifications-container {
+    position: absolute;
+    z-index: 50;
+    width: 15rem;
+    bottom: 1rem;
+    right: 1rem;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .cards {
+    grid:
+      "bsa js   php    php    " 3fr
+      "bsa js   dotnet details" 1fr
+      "qa  js   dotnet details" 2fr
+      "qa  java dotnet details" 2fr
+      / 25% 25% 30% 20%;
+  }
+}

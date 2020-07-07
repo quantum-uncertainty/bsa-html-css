@@ -1,0 +1,44 @@
+@import "animations.css";
+@import "cards.css";
+@import "header.css";
+@import "media.css";
+@import "notifications.css";
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --horizontal-margin: 5vw;
+  --header-height: 3rem;
+  --text-large: 4.5rem;
+  --text-big: 3.5rem;
+  --text-medium: 2rem;
+  --text-regular: 1.25rem;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  position: relative;
+  top: var(--header-height);
+  min-height: calc(100% - var(--header-height));
+  background-color: #f6f7fc;
+  font-family: Roboto, sans-serif;
+}
+
+.content {
+  margin: 0 var(--horizontal-margin);
+  padding: 3rem 0 4rem;
+}
+
+.footer {
+  margin: 0 var(--horizontal-margin);
+  height: 2rem;
+  text-align: center;
+}

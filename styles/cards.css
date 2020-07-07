@@ -1,0 +1,176 @@
+/* Layout */
+.cards {
+  min-height: 1400px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(6, 1fr) 3fr;
+  grid-template-areas:
+    "bsa"
+    "js"
+    "java"
+    "php"
+    "qa"
+    "dotnet"
+    "details";
+}
+
+.card {
+  position: relative;
+}
+
+.card__cover,
+.card__content {
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  display: flex;
+  position: absolute;
+}
+
+.card__cover {
+  pointer-events: none;
+  z-index: 5;
+  line-height: 1em;
+  color: white;
+  align-items: center;
+  justify-content: center;
+}
+
+.card__content {
+  background-color: whitesmoke;
+  overflow-y: auto;
+  justify-content: center;
+}
+
+.bsa {
+  grid-area: bsa;
+}
+
+.qa {
+  grid-area: qa;
+}
+
+.js {
+  grid-area: js;
+}
+
+.java {
+  grid-area: java;
+}
+
+.php {
+  grid-area: php;
+}
+
+.dotnet {
+  grid-area: dotnet;
+}
+
+.details_wrapper {
+  grid-area: details;
+  display: flex;
+  flex-direction: column;
+}
+
+.events {
+  flex: 2 1 40%;
+}
+
+.blog {
+  flex: 2 1 40%;
+}
+
+.contacts {
+  flex: 1 2 20%;
+}
+
+/* Card covers */
+.bsa > .card__cover {
+  background-color: white;
+}
+
+.qa > .card__cover {
+  background-color: #54bc7b;
+  font-size: var(--text-large);
+}
+
+.js > .card__cover {
+  background-color: #facb71;
+  color: black;
+  font-size: var(--text-large);
+  font-weight: bold;
+}
+
+.java > .card__cover {
+  background-color: #e22c4d;
+  font-size: var(--text-medium);
+  font-weight: 500;
+}
+
+.php > .card__cover {
+  background-color: #8593bc;
+  color: black;
+  font-style: italic;
+  font-size: var(--text-big);
+}
+
+.dotnet > .card__cover {
+  background-color: #622c74;
+  font-size: 4rem;
+}
+
+.events > .card__cover {
+  background-color: #009efb;
+  font-weight: 500;
+  font-size: var(--text-regular);
+}
+
+.blog > .card__cover {
+  background-color: #004b9f;
+  font-weight: 500;
+}
+
+.contacts > .card__cover {
+  background-color: #002e5d;
+  font-weight: 500;
+}
+
+/* Card contents */
+
+.bsa > .card__content {
+  align-items: center;
+}
+
+.js > .card__content,
+.php > .card__content,
+.qa > .card__content,
+.dotnet > .card__content,
+.java > .card__content {
+  font-weight: bold;
+}
+
+.contacts > .card__content {
+  justify-content: space-around;
+  align-items: center;
+}
+
+.social-button {
+  color: black;
+}
+.social-button:hover,
+.social-button:active {
+  color: #009efb;
+}
+
+.button {
+  padding: 0.5rem 1rem;
+  color: white;
+  background-color: #298ef7;
+  text-decoration: none;
+}
+
+.button:hover,
+.button:active {
+  background-color: #033a92;
+  border-radius: 3px;
+}
